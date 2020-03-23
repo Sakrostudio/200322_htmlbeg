@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: rgb(122, 59, 50);
+}
+
+.title {
+  color: rgb(28, 104, 100);
+}
+
+nav {
+  background-color: rgb(104, 232, 255);
+}
+
+nav ul {
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  padding: 35px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(15, 78, 88);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+
+.container {
+  border: 3px solid rgb(122, 59, 50);
+  padding: 75px 50px;
+  background-color: rgb(218, 218, 218);
+  margin: 75px 0;
+}
+
+.circle-img {
+  border-radius: 50%;
+}
+
+img {
+  margin-right: 20px;
+  box-shadow: 5px 5px 25px grey;
+}
+
+.flex {
+  margin: 25px;
+  padding: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 3px solid rgb(122, 59, 50);
+  justify-content: center;
+}
+
+.box {
+  background-color: blue;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+}
+
+/* ANIMATIONS  */
+
+@keyframes fadeMe {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes getBigger {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes changeColors {
+  0% {
+    background-color: #grey;
+  }
+  25% {
+    background-color: purple;
+  }
+  50% {
+    background-color: orange;
+  }
+  75% {
+    background-color: pink;
+  }
+  100% {
+    background-color: #grey;
+  }
+}
+
+@keyframes moveBox {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 100px;
+    top: 0px;
+  }
+  50% {
+    left: 100px;
+    top: 200px;
+  }
+  75% {
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+#box1 {
+  animation-name: fadeMe;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#box2 {
+  animation-name: rotation;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
+  animation-timing-function: ease-in-out;
+  border-radius: 10%;
+  background-image: radial-gradient(
+    circle,
+    rgb(138, 44, 44),
+    rgb(116, 35, 35),
+    rgb(202, 67, 67),
+    rgb(231, 73, 73),
+    rgb(231, 73, 73)
+  );
+}
+
+#box3 {
+  animation: getBigger infinite 8s linear;
+  border-radius: 50%;
+  background: orange;
+}
+
+#box4 {
+  animation: changeColors 3s 2 forwards;
+}
+
+#box5 {
+  position: relative;
+  background: red;
+  animation: moveBox 5s 3 3s;
+}
+
+#box6 {
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+/* html {
+    background-image: linear-gradient(to right, rgb(0, 155, 160), rgb(0, 126, 131), rgb(0, 155, 160));
+} */
+
+form input,
+textarea,
+button {
+  display: block;
+  margin: 30px;
+}
+
+.contact-box {
+  display: flex;
+  justify-content: center;
+  padding: 0px 200px;
+}
+
+.row {
+  margin: 30px;
+}
+
+.input-field {
+  margin: 20px;
+}
+
+
+
+.aboutBox{
+    background: rgb(214, 214, 214);
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 25px;
+}
+
+.aboutBox h1{
+    padding: 35px;
+}
+
+/* Grid By Example */
+
+.wrapper {
+    display: grid;
+grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 20% ) ;
+    grid-template-rows: repeat(3, [row] auto  );
+    background-color: #fff;
+    color: #444;
+}
+
+.boxGrid {
+    background-color:#fff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    z-index:10;
+
+}
+
+.a {
+    grid-column: col / span  2;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+}
+.b {
+    grid-column: col 4 / span  2 ;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+}
+.c {
+    grid-column: col / span 5 ;
+    grid-row: row 2 ;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, rgb(0, 247, 255), rgb(0, 143, 161), rgb(0, 126, 115));
+}
+.d {
+    grid-column: col 1 / span  3 ;
+    grid-row: row 3 ;
+    display: flex;
+    justify-content: center;
+}
+
+.e {
+    grid-column: col  3/ span 3;
+    grid-row: row 3;
+    display: flex;
+    justify-content: center;
+}
+
+.f {
+    grid-column: col 2 / span 3;
+    grid-row: row 2  ;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to left, rgb(0, 247, 255), rgb(0, 143, 161), rgb(0, 126, 115));
+    z-index: 20;
+}
